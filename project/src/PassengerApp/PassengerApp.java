@@ -18,7 +18,20 @@ import java.util.Scanner;
  */
 public class PassengerApp 
 {
-    public static void displayMenu() 
+    static ArrayList<Passenger> passengerList = new ArrayList<>();
+    
+    public static void addPassenger(Passenger p)
+    {
+        passengerList.add(p);
+        //System.out.println("New Passenger Added");
+    }
+    
+    public static void main(String[] args)
+    {
+        UI ui = new UI();
+        ui.setVisible(true);
+    }        
+    /*public static void displayMenu() 
     {
         System.out.println("------------------------------------------");
         System.out.println("\tCheck-In Baggage System");
@@ -94,5 +107,5 @@ public class PassengerApp
         } while(choice != 3);
         
         System.out.println("Thank you for using this system :)");
-    }
+    }*/
 }
