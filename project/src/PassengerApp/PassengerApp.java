@@ -6,7 +6,6 @@
 package PassengerApp;
 
 import java.util.ArrayList;
-import Model.Passenger;
 import Model.Destination;
 import Model.Baggage;
 import Model.BusinessClass;
@@ -24,7 +23,6 @@ public class PassengerApp
     static ArrayList<FirstClass> firstPassengerList = new ArrayList<>(); // Comment this line if You are going to use IDE Output
     static ArrayList<BusinessClass> businessPassengerList = new ArrayList<>(); // Comment this line if You are going to use IDE Output
     static ArrayList<EconomyClass> economyPassengerList = new ArrayList<>(); // Comment this line if You are going to use IDE Output
-    
     
     // Comment this function if You are going to use IDE Output
     public static void main(String[] args)
