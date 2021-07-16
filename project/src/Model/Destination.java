@@ -14,12 +14,19 @@ public class Destination
     private String city;
     private String country;
     
+    public Destination()
+    {
+        this.city = "";
+        this.country = "";
+    }
+    
     public Destination(String city, String country)
     {
         this.city = city;
         this.country = country;
     }
     
+    @Override
     public String toString()
     {
         String s;
