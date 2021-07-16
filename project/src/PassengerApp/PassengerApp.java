@@ -21,22 +21,19 @@ import java.util.Scanner;
  */
 public class PassengerApp 
 {
-    //static ArrayList<Passenger> passengerList = new ArrayList<>(); // Comment this line if You are going to use IDE Output
+    static ArrayList<FirstClass> firstPassengerList = new ArrayList<>(); // Comment this line if You are going to use IDE Output
+    static ArrayList<BusinessClass> businessPassengerList = new ArrayList<>(); // Comment this line if You are going to use IDE Output
+    static ArrayList<EconomyClass> economyPassengerList = new ArrayList<>(); // Comment this line if You are going to use IDE Output
     
-    // Comment this function if You are going to use IDE Output
-    /*public static void addPassenger(Passenger p)
-    {
-        passengerList.add(p);
-        //System.out.println("New Passenger Added");
-    }
     
     // Comment this function if You are going to use IDE Output
     public static void main(String[] args)
     {
         UI ui = new UI();
         ui.setVisible(true);
-    }        */
+    }
     
+    /*
     // Comment this function if You are going to use User Interface Output
     public static void displayMenu() 
     {
@@ -180,4 +177,5 @@ public class PassengerApp
         
         System.out.println("Thank you for using this system :)");
     }
+    */
 }

@@ -6,7 +6,10 @@
 package PassengerApp;
 
 import Model.Baggage;
+import Model.BusinessClass;
 import Model.Destination;
+import Model.EconomyClass;
+import Model.FirstClass;
 import Model.Passenger;
 import javax.swing.JOptionPane;
 
@@ -339,7 +342,9 @@ public class add extends javax.swing.JFrame {
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        Passenger p;
+        FirstClass fc;
+        BusinessClass bc;
+        EconomyClass ec;
         Destination d;
         Baggage b;
         
@@ -365,20 +370,54 @@ public class add extends javax.swing.JFrame {
                 break;
         }
         
-        d = new Destination(ci, co);
-        p = new Passenger(fn, ln, s, d);
-        
-        num = (Integer) jSpinner1.getValue();
-        
-        for(int i = 0; i < num; i++)
+        switch(s)
         {
-            String temp[] = jTextArea1.getText().split("\\n");
-            w = Double.parseDouble(temp[i]);
-            b = new Baggage(w);
-            p.checkIn(b);
+            case "F":
+                d = new Destination(ci, co);
+                fc = new FirstClass(fn, ln, d);
+
+                num = (Integer) jSpinner1.getValue();
+                for(int i = 0; i < num; i++)
+                {
+                    String temp[] = jTextArea1.getText().split("\\n");
+                    w = Double.parseDouble(temp[i]);
+                    b = new Baggage(w);
+                    fc.checkIn(b);
+                }
+                            
+                PassengerApp.firstPassengerList.add(fc);
+                break;
+            case "B":
+                d = new Destination(ci, co);
+                bc = new BusinessClass(fn, ln, d);
+
+                num = (Integer) jSpinner1.getValue();
+                for(int i = 0; i < num; i++)
+                {
+                    String temp[] = jTextArea1.getText().split("\\n");
+                    w = Double.parseDouble(temp[i]);
+                    b = new Baggage(w);
+                    bc.checkIn(b);
+                }
+                            
+                PassengerApp.businessPassengerList.add(bc);
+                break;
+            case "E":
+                d = new Destination(ci, co);
+                ec = new EconomyClass(fn, ln, d);
+                            
+                num = (Integer) jSpinner1.getValue();
+                for(int i = 0; i < num; i++)
+                {
+                    String temp[] = jTextArea1.getText().split("\\n");
+                    w = Double.parseDouble(temp[i]);
+                    b = new Baggage(w);
+                    ec.checkIn(b);
+                }
+                            
+                PassengerApp.economyPassengerList.add(ec);
+                break;
         }
-        
-        PassengerApp.addPassenger(p);
         
         JOptionPane.showMessageDialog(jFrame1, "New Passenger Added");
         
