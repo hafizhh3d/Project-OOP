@@ -26,6 +26,16 @@ public class Destination
         this.country = country;
     }
     
+    public String getCity()
+    {
+        return city;
+    }
+    
+    public String getCountry()
+    {
+        return country;
+    }
+    
     @Override
     public String toString()
     {
