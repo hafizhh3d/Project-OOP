@@ -43,7 +43,36 @@ public class details extends javax.swing.JFrame {
                 
                 jTextField5.setText(seat);
                 
+                jTextField6.setText(String.valueOf(PassengerApp.firstPassengerList.get(index).getBaggNum()));
+                
                 jTextArea1.setText(PassengerApp.firstPassengerList.get(index).getBaggList());
+                break;
+            case "B":
+                jTextField1.setText(PassengerApp.businessPassengerList.get(index).getFirstName());
+                jTextField2.setText(PassengerApp.businessPassengerList.get(index).getLastName());
+                
+                jTextField3.setText(PassengerApp.businessPassengerList.get(index).getCity());
+                jTextField4.setText(PassengerApp.businessPassengerList.get(index).getCountry());
+                
+                jTextField5.setText(seat);
+                
+                jTextField6.setText(String.valueOf(PassengerApp.businessPassengerList.get(index).getBaggNum()));
+                
+                jTextArea1.setText(PassengerApp.businessPassengerList.get(index).getBaggList());
+                break;
+            case "E":
+                jTextField1.setText(PassengerApp.economyPassengerList.get(index).getFirstName());
+                jTextField2.setText(PassengerApp.economyPassengerList.get(index).getLastName());
+                
+                jTextField3.setText(PassengerApp.economyPassengerList.get(index).getCity());
+                jTextField4.setText(PassengerApp.economyPassengerList.get(index).getCountry());
+                
+                jTextField5.setText(seat);
+                
+                jTextField6.setText(String.valueOf(PassengerApp.economyPassengerList.get(index).getBaggNum()));
+                
+                jTextArea1.setText(PassengerApp.economyPassengerList.get(index).getBaggList());
+                break;
         }
     }
     

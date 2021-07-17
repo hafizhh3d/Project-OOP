@@ -195,7 +195,6 @@ public class display extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         String fname, seat = null;
         int index = -1;
-        boolean found = false;
         JFrame j;
         
         fname = jTextField1.getText();
@@ -215,13 +214,31 @@ public class display extends javax.swing.JFrame {
         switch(seat)
         {
             case "F":
-                index = PassengerApp.firstPassengerList.indexOf(fname);
+                for(int i = 0; i < PassengerApp.firstPassengerList.size(); i++)
+                {
+                    if(fname.equals(PassengerApp.firstPassengerList.get(i).getFirstName()))
+                    {
+                        index = i;
+                    }
+                }
                 break;
             case "B":
-                index = PassengerApp.businessPassengerList.indexOf(fname);
+                for(int i = 0; i < PassengerApp.businessPassengerList.size(); i++)
+                {
+                    if(fname.equals(PassengerApp.businessPassengerList.get(i).getFirstName()))
+                    {
+                        index = i;
+                    }
+                }
                 break;
             case "E":
-                index = PassengerApp.economyPassengerList.indexOf(fname);
+                for(int i = 0; i < PassengerApp.economyPassengerList.size(); i++)
+                {
+                    if(fname.equals(PassengerApp.economyPassengerList.get(i).getFirstName()))
+                    {
+                        index = i;
+                    }
+                }
                 break;
         }
         

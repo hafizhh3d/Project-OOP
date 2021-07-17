@@ -49,13 +49,18 @@ public class Passenger extends Person
         return dest.getCountry();
     }
     
+    public int getBaggNum()
+    {
+        return this.baggList.size();
+    }
+    
     public String getBaggList()
     {
         String s = "";
         
         for(int i = 0; i < this.baggList.size(); i++)
         {
-            s += "\tBag " + (i+1) + " : " + this.baggList.get(i).getWeight() + " kg\n";
+            s += "Bag " + (i+1) + " : " + this.baggList.get(i).getWeight() + " kg\n";
         }
         
         return s;
