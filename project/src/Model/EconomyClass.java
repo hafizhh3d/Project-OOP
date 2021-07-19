@@ -11,7 +11,7 @@ package Model;
  */
 public class EconomyClass extends Passenger
 {
-    protected final int allowedWeight = 50;
+    protected final int allowedWeight = 45;
     protected String seat = "Economy";
     protected double totWeight = 0.00;
     protected double excWeight;
